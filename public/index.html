@@ -11,9 +11,20 @@
 
 
     <h1>Trivia Game</h1>
+    <nav>
+      <ul>
+        <li><a href="#/login">login</a></li>
+        <li><a href="#/playgame">playgame</a></li>
+        <li><a href="#/gameover">gameover</a></li>
+      </ul>
+    </nav>
+
+    <main ng-view></main>
+
     <section ng-controller="GameController">
 
       <button ng-click="ask()">New Question!</button>
+      <h3>Category: {{ newQuestion.category }}</h3>
       <h2>Your question: {{ newQuestion }}?</h2>
 
       <input type="text" ng-model="playeranswer">
@@ -24,10 +35,10 @@
 
       <h3>Older Questions:</h3>
       <ul ng-repeat="question in questionHistory | orderBy:'question'">
-        <li>{{ question }}</li>
+        <li>{{ question.question }}</li>
       </ul>
 
-      <h3>Player's Score: {{ score }}</h3>
+      <h3>Total Score: {{ score }}</h3>
 
     </section>
   </body>

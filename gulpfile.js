@@ -21,6 +21,6 @@ gulp.task('js', function(){
 
 gulp.task('watch', function(){
   gulp.watch('./index.html', ['html'])
-  gulp.watch('./main.js', ['js'])
-  gulp.watch('./controllers/game.js', ['js'])
+  gulp.watch('./js/*.js', ['js'])
+  gulp.watch('./templates/*.html', ['html'])
 });

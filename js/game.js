@@ -11,6 +11,7 @@ module.exports = function(app) {
             question: 'Your question.. ',
             answer: 'Correct Answer',
             value: 0,
+            category: 'Category',
         };
 
         //storing player not working
